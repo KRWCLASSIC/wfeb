@@ -1,9 +1,10 @@
-import os
-import sys
-import shutil
-import tempfile
-import zipfile
 import xml.etree.ElementTree as ET
+import tempfile
+import argparse
+import zipfile
+import shutil
+import sys
+import os
 
 def modify_settings_xml(file_path):
     # Parse the XML file
@@ -102,12 +103,27 @@ def process_docx(docx_path):
 
 def main():
     """Main entry point for the command-line interface."""
-    if len(sys.argv) < 2:
-        print("Usage: wfeb <path_to_docx_file>")
+    parser = argparse.ArgumentParser(
+        description="Remove edit protection from Microsoft Word documents (.docx)."
+    )
+    parser.add_argument(
+        "docx_file", 
+        help="Path to the .docx file to process"
+    )
+    parser.add_argument(
+        "-v", "--version", 
+        action="version", 
+        version="WFEB 1.0"
+    )
+    
+    # If no arguments provided, show help
+    if len(sys.argv) == 1:
+        parser.print_help()
         return 1
-
-    docx_path = sys.argv[1]
-    if not process_docx(docx_path):
+    
+    args = parser.parse_args()
+    
+    if not process_docx(args.docx_file):
         return 1
     
     return 0

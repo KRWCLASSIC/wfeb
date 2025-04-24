@@ -1,4 +1,5 @@
 MANIFEST.in
+__main__.py
 readme.md
 setup.py
 wfeb.py

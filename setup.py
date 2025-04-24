@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name="wfeb",
     version="1.0",
-    py_modules=["wfeb"],
+    py_modules=["wfeb", "__main__"],
     entry_points={
         'console_scripts': [
             'wfeb=wfeb:main',
@@ -17,4 +17,8 @@ setup(
     keywords="word, document, protection, docx",
     url="https://github.com/KRWCLASSIC/wfeb",
     python_requires=">=3.6",
-) 
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'Environment :: Console',
+    ],
+)

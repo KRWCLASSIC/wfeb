@@ -39,16 +39,12 @@ wfeb document.docx
 ## Installation
 
 ```bash
-pip install git+https://github.com/KRWCLASSIC/wfeb.git
-```
-
-Or for development:
-
-```bash
 git clone https://github.com/KRWCLASSIC/wfeb.git
 cd wfeb
 pip install -e .
 ```
+
+> Might be broken, I had too much issues with it, sorry.
 
 ## Technical Details
 

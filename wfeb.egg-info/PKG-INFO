@@ -6,10 +6,13 @@ Home-page: https://github.com/KRWCLASSIC/wfeb
 Author: KRWCLASSIC
 Author-email: classic.krw@gmail.com
 Keywords: word,document,protection,docx
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Console
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 Dynamic: author
 Dynamic: author-email
+Dynamic: classifier
 Dynamic: description
 Dynamic: description-content-type
 Dynamic: home-page
@@ -17,14 +20,14 @@ Dynamic: keywords
 Dynamic: requires-python
 Dynamic: summary
 
-# (Microsoft) Word File Edit Bypass `1.0`
+# (Microsoft) Word File Edit Bypass (WFEB) `1.0`
 
-A simple utility to remove edit protection from Microsoft Word documents (.docx) while preserving the document content.
+A simple utility to remove edit protection from Microsoft Word documents (.docx).
 
 ## What This Tool Does
 
 - **Removes document edit protection** by modifying the `settings.xml` file inside the Word document
-- **Disables tracking revisions** to prevent Word from tracking edit changes (Removes manual accepts)
+- **Disables tracking revisions** to prevent Word from tracking edits (Removes manual accepts)
 - **Creates backups** of original files before modification
 - **Works with .docx files** (modern Word format)
 
@@ -54,6 +57,16 @@ Or if installed as a package:
 ```bash
 wfeb document.docx
 ```
+
+## Installation
+
+```bash
+git clone https://github.com/KRWCLASSIC/wfeb.git
+cd wfeb
+pip install -e .
+```
+
+> Might be broken, I had too much issues with it, sorry.
 
 ## Technical Details
 
