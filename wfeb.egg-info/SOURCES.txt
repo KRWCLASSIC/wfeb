@@ -1,0 +1,9 @@
+MANIFEST.in
+readme.md
+setup.py
+wfeb.py
+wfeb.egg-info/PKG-INFO
+wfeb.egg-info/SOURCES.txt
+wfeb.egg-info/dependency_links.txt
+wfeb.egg-info/entry_points.txt
+wfeb.egg-info/top_level.txt

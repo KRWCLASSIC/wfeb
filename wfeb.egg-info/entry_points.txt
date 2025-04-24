@@ -1,0 +1,2 @@
+[console_scripts]
+wfeb = wfeb:main
